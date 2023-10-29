@@ -1,0 +1,172 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Tarefas API",
+        "version": "1.0",
+        "description": "API para gerenciar tarefas"
+    },
+    "paths": {
+        "/tarefas": {
+            "get": {
+                "tags": ["Tarefas"],
+                "summary": "Lista todas as tarefas",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Tarefa"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": ["Tarefas"],
+                "summary": "Criar uma nova tarefa",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Dados da tarefa a ser criada",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TarefaInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Tarefa criada com sucesso",
+                        "schema": {
+                            "$ref": "#/definitions/Tarefa"
+                        }
+                    }
+                }
+            }
+        },
+        "/tarefas/{id}": {
+            "get": {
+                "tags": ["Tarefas"],
+                "summary": "Obter uma tarefa por ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da tarefa",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "schema": {
+                            "$ref": "#/definitions/Tarefa"
+                        }
+                    },
+                    "404": {
+                        "description": "Tarefa não encontrada"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Tarefas"],
+                "summary": "Editar uma tarefa",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da tarefa",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Dados da tarefa a ser editada",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TarefaInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tarefa editada com sucesso",
+                        "schema": {
+                            "$ref": "#/definitions/Tarefa"
+                        }
+                    },
+                    "404": {
+                        "description": "Tarefa não encontrada ou dados inválidos"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Tarefas"],
+                "summary": "Excluir uma tarefa",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da tarefa a ser excluída",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tarefa excluída com sucesso"
+                    },
+                    "404": {
+                        "description": "Tarefa não encontrada"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "TarefaInput": {
+            "type": "object",
+            "properties": {
+                "titulo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "prioridade": {
+                    "type": "string",
+                    "enum": ["baixa", "média", "alta"]
+                },
+                "data_de_criacao": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "Tarefa": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "titulo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                },
+                "prioridade": {
+                    "type": "string"
+                },
+                "data_de_criacao": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        }
+    }
+}
