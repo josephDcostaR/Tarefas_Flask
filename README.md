@@ -2,10 +2,11 @@
 <p>Uma API simples para gerenciar tarefas utilizando Python e Flask.</p>
 
 <h2>Pré-requisitos</h2>h2>
-Python 3.7 ou superior
-Flask
-Postman (ou outra ferramenta para testar APIs)
-
+<ol>
+<li>Python 3.7 ou superior.</li>
+<li>Flask</li>
+<li>Postman (ou outra ferramenta para testar APIs)</li>
+</ol>
 <h2>Configuração</h2>
 
 1.Clone o repositório para a sua máquina:
