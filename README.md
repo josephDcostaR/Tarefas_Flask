@@ -1,12 +1,12 @@
 # Tarefas_Flask
-Uma API simples para gerenciar tarefas utilizando Python e Flask.
+<p>Uma API simples para gerenciar tarefas utilizando Python e Flask.</p>
 
-##Pré-requisitos
+<h2>Pré-requisitos</h2>h2>
 Python 3.7 ou superior
 Flask
 Postman (ou outra ferramenta para testar APIs)
 
-##Configuração
+<h2>Configuração</h2>
 
 1.Clone o repositório para a sua máquina:
 git clone https://github.com/seu-usuario/api-tarefas.git
