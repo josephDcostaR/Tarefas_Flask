@@ -16,7 +16,7 @@
 <ol start="2">
     <li>Navegue até o diretório do projeto:</li>
 </ol>
-<code>cd api-tarefas</code>
+<code>cd Tarefas_Flask</code>
 <ol start="3">
     <li>Instale as dependências:</li>
 </ol>
