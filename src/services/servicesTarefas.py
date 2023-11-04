@@ -1,5 +1,5 @@
-from model.tarefas import Tarefa
-from repository.repository import RepositorioTarefas
+from src.model.tarefas import Tarefa
+from src.repository.repository import RepositorioTarefas
 
 repositorioTarefas = RepositorioTarefas()
 

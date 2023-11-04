@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request, Flask
 from flask_restful import Api
-from services.servicesTarefas import ServicoTarefas
-from repository.repository import RepositorioTarefas
+from src.services.servicesTarefas import ServicoTarefas
+from src.repository.repository import RepositorioTarefas
 
 
 app = Flask(__name__)

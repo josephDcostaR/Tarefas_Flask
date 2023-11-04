@@ -1,7 +1,7 @@
 from flask import Flask
 #from repository.repository import RepositorioTarefas
 #from view.view import TarefasView
-from controller.tarefasController import tarefas_route
+from src.controller.tarefasController import tarefas_route
 from flask_restful import Api
 from flask_swagger_ui import get_swaggerui_blueprint
 
