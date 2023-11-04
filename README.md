@@ -12,11 +12,11 @@
 <ol>
     <li>Clone o repositório para a sua máquina:</li>
 </ol>
-<code>git clone https://github.com/seu-usuario/api-tarefas.git</code>
+<code>https://github.com/josephDcostaR/Tarefas_Flask.git</code>
 <ol start="2">
     <li>Navegue até o diretório do projeto:</li>
 </ol>
-<code>cd api-tarefas</code>
+<code>cd Tarefas_Flask</code>
 <ol start="3">
     <li>Instale as dependências:</li>
 </ol>
